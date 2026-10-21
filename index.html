@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Brooklynne is turning 3!</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(#fff0f6,#e8f4ff);color:#333;overflow-x:hidden}
+.conf{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#ff6fae 2px,transparent 3px),radial-gradient(#ffd23f 2px,transparent 3px),radial-gradient(#5ec8ff 2px,transparent 3px),radial-gradient(#8de38a 2px,transparent 3px);background-size:60px 60px,80px 80px,70px 70px,90px 90px;background-position:0 0,30px 20px,15px 40px,50px 10px;opacity:.55}
+main{position:relative;max-width:480px;margin:auto;padding:20px 16px 40px;text-align:center}
+.balloons{font-size:42px;letter-spacing:4px}.b{display:inline-block;animation:f 3s ease-in-out infinite}.b:nth-child(2){animation-delay:.6s}.b:nth-child(3){animation-delay:1.2s}
+@keyframes f{50%{transform:translateY(-10px)}}
+.three{font-size:140px;font-weight:900;line-height:1;margin:4px 0;background:linear-gradient(45deg,#ff6fae,#ffb03f,#5ec8ff);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 6px 18px rgba(255,111,174,.25)}
+h1{margin:6px 0;font-size:30px;color:#e0438c}p.lead{font-size:17px;margin:8px 0 18px}
+.note{background:#fff;border:2px dashed #ffb03f;border-radius:14px;padding:10px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.card{background:#fff;border-radius:18px;padding:14px;margin:12px 0;box-shadow:0 4px 14px rgba(0,0,0,.07);text-align:left}
+.card h2{margin:0 0 8px;font-size:18px}.row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:6px 0;font-size:15px;word-break:break-all}
+a.btn{display:block;text-align:center;text-decoration:none;color:#fff;font-weight:700;padding:13px;border-radius:12px;font-size:17px;margin-top:6px}
+button.cp{border:0;background:#f1f1f6;border-radius:9px;padding:8px 12px;font-weight:600;cursor:pointer;flex-shrink:0}
+.cash{background:#00c244}.venmo{background:#008cff}.paypal{background:#003087}.apple{background:#111}
+small{color:#666;display:block;margin-top:6px}footer{margin-top:20px;font-size:14px;color:#888}
+</style></head><body><div class="conf"></div><main>
+<div class="balloons"><span class="b">🎈</span><span class="b">🎉</span><span class="b">🎈</span></div>
+<div class="three">3</div>
+<h1>Brooklynne is turning 3!</h1>
+<p class="lead">Instead of gifts, we're saving for Brooklynne's needs. Thank you! 💖</p>
+<div class="note"><span>Payment note: <b>Brooklynne's Birthday!</b></span><button class="cp" data-c="Brooklynne's Birthday!">Copy</button></div>
+
+<div class="card" id="apple"><h2>🍎 Apple Cash</h2>
+<div class="row"><span>501-213-5077</span><button class="cp" data-c="5012135077">Copy</button></div>
+<a class="btn apple" href="sms:+15012135077">Send with Apple Cash in Messages</a>
+<small>Tip: open Messages, tap +, then Apple Cash.</small></div>
+
+<div class="card"><h2>💵 Cash App</h2>
+<div class="row"><span>$Tarrzann</span><button class="cp" data-c="$Tarrzann">Copy</button></div>
+<a class="btn cash" href="https://cash.app/$Tarrzann">Open Cash App</a></div>
+
+<div class="card"><h2>💙 Venmo</h2>
+<div class="row"><span>@nick71491</span><button class="cp" data-c="@nick71491">Copy</button></div>
+<a class="btn venmo" href="https://venmo.com/nick71491?txn=pay&amp;note=Brooklynne%27s%20Birthday!">Open Venmo</a></div>
+
+<div class="card"><h2>🅿️ PayPal</h2>
+<div class="row"><span>paypal.me/nicklawhon</span><button class="cp" data-c="https://paypal.me/nicklawhon">Copy</button></div>
+<div class="row"><span>nicklawhon09@gmail.com</span><button class="cp" data-c="nicklawhon09@gmail.com">Copy</button></div>
+<a class="btn paypal" href="https://paypal.me/nicklawhon">Open PayPal</a></div>
+
+<div class="card"><h2>💚 Chime</h2>
+<div class="row"><span>$Tarrzan</span><button class="cp" data-c="$Tarrzan">Copy</button></div>
+<small>In the Chime app: Pay → Pay Anyone → enter $Tarrzan.</small></div>
+<footer>🎂 With love, Brooklynne's family</footer></main>
+<script>
+document.querySelectorAll('.cp').forEach(b=>b.onclick=async()=>{const t=b.dataset.c;try{await navigator.clipboard.writeText(t)}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}const o=b.textContent;b.textContent='Copied!';setTimeout(()=>b.textContent=o,1500)});
+var ios=/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+if(!ios){var a=document.getElementById('apple');a.parentNode.insertBefore(a,document.querySelector('footer'));}
+</script></body></html>
